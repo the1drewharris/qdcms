@@ -1,0 +1,8 @@
+Site Module
+----------------------
+
+Features
+----------------------
+	1. Add New Site
+	2. Edit Site
+	3. Select a Site

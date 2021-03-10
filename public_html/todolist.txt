@@ -1,0 +1,7 @@
+1. Make sure all template paths are relative
+2. Fix delete web pages
+3. Move Forum Images UI over here
+4. Contacts will not upload at all
+5. There is an error when trying to update the "About Merritt's Bakery" webpage: The WPID argument passed to the updatePage function is not numeric
+6. State list should be International and tied to Country selection for contacts
+7. Website needs to be added to the add/update Contact form

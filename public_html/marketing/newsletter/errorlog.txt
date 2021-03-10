@@ -1,0 +1,9 @@
+2012-42-20 09:42AM Variable SENTTOEMAIL is undefined.
+2012-44-20 09:44AM Variable SENTTOEMAIL is undefined.
+2012-49-20 09:49AM Variable SENTTOEMAIL is undefined.
+2012-22-20 03:22PM Variable NAMEID is undefined.
+2012-44-20 04:44PM Variable NAMEID is undefined.
+2012-39-28 02:39PM Variable NAMEID is undefined.
+2012-03-29 01:03PM Variable NAMEID is undefined.
+2012-04-29 01:04PM Variable NAMEID is undefined.
+2012-20-01 01:20PM Variable NAMEID is undefined.

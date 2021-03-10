@@ -1,0 +1,17 @@
+<cfcontent type="text/x-json">
+<cfparam name="url.eventid" default="0">
+<cfset time = "h:mmtt">
+<cfset date = "dddd, mmm dth, yyyy">
+<cfset charMax = 45>
+
+<cfinvoke component="#Application.objEvent#" method="getEventInfo" eventdsn="#client.siteurl#" eventinstanceid="#url.eventid#" returnVariable="eventInfo">
+
+<cfoutput query="eventInfo" group="eventid">
+	{
+		"status":"#JSStringFormat(eventInfo.status)#",
+		"eventid":"#eventInfo.eventid#",
+		"eventname":"#JSStringFormat(eventInfo.eventname)#",
+		"eventinstanceid":"#url.eventid#",
+		"blob":"<table><cfif len(status)><tr><td class='label'>Status: </td><td>#status#</td></tr></cfif><cfif frequency NEQ 'None'><tr><td class='label'>Date of First Occurance: </td><td>#Application.objtimedateconversion.convertDate(actualstarttime,date)#</td></tr><tr><td class='label'>Time: </td><td><cfif actualstarttime EQ actualendtime>#Application.objtimedateconversion.converttime(starttime,time)#<cfelseif Application.objtimedateconversion.converttime(actualstarttime,time) EQ '12:00AM' AND #Application.objtimedateconversion.converttime(actualendtime,time)# EQ '11:59PM'>All Day Event<cfelse>#Application.objtimedateconversion.converttime(actualstarttime,time)# - #Application.objtimedateconversion.converttime(actualendtime,time)#</cfif></td></tr><cfif repeatend EQ 'repeat-date'><tr><td class='label'>Repeat Until: </td><td>#Application.objtimedateconversion.convertDate(until,date)#</td></tr><cfelseif repeatend EQ 'repeat-after'><tr><td class='label'>End After: </td><td>#repeatafter# times</td></tr></cfif><tr><td class='label'>Repeat: </td><td>#frequency#</td></tr><cfelseif left(actualstarttime,8) EQ left(actualendtime,8)><tr><td class='label'>Date: </td><td>#Application.objtimedateconversion.convertDate(actualstarttime,date)#</td></tr><tr><td class='label'>Time: </td><td><cfif actualstarttime EQ actualendtime>#Application.objtimedateconversion.converttime(actualstarttime,time)#<cfelseif Application.objtimedateconversion.converttime(actualstarttime,time) EQ '12:00AM' AND #Application.objtimedateconversion.converttime(actualendtime,time)# EQ '11:59PM'>All Day Event<cfelse>#Application.objtimedateconversion.converttime(actualstarttime,time)# - #Application.objtimedateconversion.converttime(actualendtime,time)#</cfif></td></tr><cfelse><tr><td class='label'>From: </td><td>#Application.objtimedateconversion.convertDate(actualstarttime,date)#</td></tr><tr><td class='label'>To: </td><td>#Application.objtimedateconversion.convertDate(actualendtime,date)#</td></tr></cfif><cfif defaultprice><tr><td class='label'>Standard Price</td><td>#LSCurrencyFormat(DEFAULTPRICE)#</td></tr></cfif><cfif discountprice><tr><td class='label'>Discount Price</td><td>#LSCurrencyFormat(DISCOUNTPRICE)#</td></tr></cfif><cfif guestprice><tr><td class='label'>Guest Price</td><td>#LSCurrencyFormat(GUESTPRICE)#</td></tr></cfif><cfif len(locationname)><tr><td class='label'>Location: </td><td>#locationname#<br /><cfif len(locationaddress1)>#locationaddress1#<br /></cfif><cfif len(locationcity)>#locationcity#<cfif len(locationstate)>, </cfif></cfif><cfif len(locationstate)>#locationstate#</cfif> #locationzip#</td></tr></cfif><cfif len(contactfirstname)><tr><td class='label'>Contact: </td><td><cfif len(contactemail)><a href='mailto:#contactemail#'></cfif>#contactfirstname# <cfif len(contactlastname)>#contactlastname#</cfif><cfif len(contactemail)></a></cfif></td></tr></cfif></table>"
+		}<cfif eventInfo.currentRow LT eventInfo.recordCount >,</cfif>
+</cfoutput>

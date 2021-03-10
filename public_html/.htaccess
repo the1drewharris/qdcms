@@ -1,0 +1,13 @@
+Header unset Etag
+FileETag none
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^([^/.]+)/([^/.]+).html /index.cfm?layout=$2&section=$1 [nc]
+RewriteRule ^cms/([^/.]+)/([^/.]+)/([^/.]+) /index.cfm?section=$1&module=$2&action=$3 [QSA]
+RewriteRule ^cms/([^/.]+)/([^/.]+)/([^/.]+)/(.*) /index.cfm?section=$1&module=$2&action=$3$4 [QSA]
+RewriteRule ^cms/([^/.]+)/([^/.]+) /index.cfm?section=$1&module=$2 [QSA]
+RewriteRule ^cms/([^/.]+)/([^/.]+)/(.*) /index.cfm?section=$1&module=$2$3 [QSA]
+RewriteRule ^cms/([^/.]+) /index.cfm?section=$1 [QSA]
+RewriteRule ^cms/([^/.]+)/(.*) /index.cfm?section=$1$2 [QSA]
+RewriteRule ^viewer/layoutviewer/site([^/.]+).html /index.cfm?siteid=$1&layout=layoutviewer [nc]
+RewriteRule ^view.([^/.]+).([^/.]+).font([^/.]+).layoutviewer/([^/.]+).html /index.cfm?layout=layoutviewer&template=$1&theme=$2&font=$3&page=$4 [nc]
