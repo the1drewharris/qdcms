@@ -1,0 +1,26 @@
+User Module
+------------------------------
+
+Features
+----------------
+	1. Add/Edit User
+	2. Assign Site
+	3. Assign Role or each site except for ROLEID GTE 4
+	4. Assign Module
+	5. If assigned both module and role, the user will have access to union of modules
+	
+	Form should look like this
+	
+	-----------------------------------------------------------------------------------------------------------------------------------
+	Site         | Role           | Modules
+	-----------------------------------------------------------------------------------------------------------------------------------
+	918moms      | drop down box* | List if modules the user have access to. This should be check box
+	-----------------------------------------------------------------------------------------------------------------------------------
+	
+	*drop down box contains roles inferior to the person who is using qdcms
+	
+Add/Edit user
+----------------
+	1. Form to add and edit user. It should have roles available. 
+	2. Roles listing should have ROLEID LT ROLEID of the person who is adding the role.
+	3. It should have sites available for the user who is adding the user. The site list should show up only if the ROLEID LT 4.

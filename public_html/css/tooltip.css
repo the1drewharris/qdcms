@@ -1,0 +1,22 @@
+/* Tooltip CSS */
+.tool-tip {
+	color: #f3eb9f;
+	font-weight: bold;
+	width: 175px;
+	z-index: 13000;
+	background: url(/siteimages/tooltip.png);
+}
+ 
+.tool-title {
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0;
+	color: #FFF;
+	display: none;
+	padding: 8px 8px 4px;
+}
+ 
+.tool-text {
+	font-size: 11px;
+	padding: 4px 8px 8px;
+}

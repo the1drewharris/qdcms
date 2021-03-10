@@ -1,0 +1,1 @@
+<cfsetting showDebugOutput="No"><cfinvoke component="webpage" method="myXmlTemplates" type="web" ds="#client.siteurl#" returnvariable="myXml"><cfoutput>#myXml#</cfoutput>

@@ -1,0 +1,588 @@
+/* Register Form Stuff */
+.validation-advice, .custom-advice {
+	background: #880000;
+	padding: 3px;
+	margin-top: 3px;
+	color: #fff;
+	float: left;
+	font-weight: normal;
+	font-size: 11px;
+}
+#formholder h3 {
+	display: block;
+	color: #FFF2B5;
+	background: rgb(0,0,0);
+	font-size: 18px;
+	line-height: 125%;
+	padding:5px;
+}
+#form em {
+	color: #aa0000;
+	}
+
+#form .slider {
+	padding: 0px;
+	margin: 0px;
+	}
+	
+#form .slider dd {
+	margin: 0px;
+	padding: 5px;
+	border: 1px solid #eee;
+	}
+	
+#form .slider dd .subitem-checkbox{
+	margin: 0px;
+	padding-left: 15px;
+	}
+	
+#form .slider dt {
+	margin: 0px;
+	padding: 8px 5px 8px 30px;
+	background: #272c39 url(/siteimages/sliderInactive.gif) no-repeat;
+	color: #f9f9f9;
+	}
+	
+#publishClick {
+	color: #272c39;
+	text-decoration: underline;
+	}
+	
+
+#form .slider dt.slideActive {
+	background: #272c39 url(/siteimages/sliderActive.gif) no-repeat;
+	padding: 8px 5px 8px 30px;
+	}	
+	
+#form fieldset {
+	padding: 5px 10px;
+	margin: 0px;
+	border: 0px;
+	}
+	
+#form fieldset.submitbutton {
+	margin: 10px 0px;
+	}
+	
+#form legend {
+	margin: 10px 0px 0px 0px;
+	padding: 5px 10px;
+	color: #f4116b;
+	font-size: 16px;
+	font-weight: bold;
+	background: #b7e25f;
+	}
+	
+#form label {
+	display: block;
+	width: 310px;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 14px;
+	padding: 0px 0px 12px 0px;
+	text-align: left;
+}
+
+#form input,
+#form select,
+#form textarea {
+	border: 1px solid #666;
+	padding: 2px;
+	font-weight: normal;
+	margin-top: 3px;
+	font-family: Arial;
+	font-size: 12px;
+	}
+	
+#form select {
+	padding: 1px;
+	}
+
+#form label.name,
+#form label.nameSmall,
+#form label.description,
+#form label.descriptionSmall,
+#form label.submit {
+	clear: left;
+	}
+	
+	
+#form label.description,
+#form label.name {
+	float: left;
+	text-align: left;
+	width: 450px;
+	margin: 0px 10px 0px 0px;
+}
+
+#form label.descriptionSmall,
+#form label.nameSmall {
+	float: left;
+	text-align: left;
+	width: 150px;
+	font-size: 12px;
+	margin: 0px 10px 0px 0px;
+}
+
+#form label.descriptionSmall textarea,
+#form label.nameSmall input,
+#form label.nameSmall select,
+#form label.nameSmall textarea {
+	float: left;
+	width: 305px;
+	display: block;
+	margin-top: 3px;
+	}
+
+	
+#form label.description textarea,
+#form label.name input,
+#form label.name select,
+#form label.name textarea {
+	float: left;
+	width: 450px;
+	display: block;
+	margin-top: 3px;
+	}
+	
+#form label.name select {
+	padding: 2px;
+	width: 455px;
+	}
+	
+	
+#form label.gender select,
+#form label.gender {
+	width: 80px;
+	}
+	
+#form label.birthday,
+#form label.birthday input {
+	width: 110px;
+	}
+	
+#form label.description textarea,
+#form label.name textarea {
+	float: left;
+	height: 150px;
+	}
+	
+#form label.estmonth select,
+#form label.estmonth, 
+#form label.estyear,
+#form label.estyear input,
+#form label.yearsinbusiness,
+#form label.yearsinbusiness input,
+#form label.zip,
+#form label.zip input {
+	float: left;
+	width: 95px;
+	}
+	
+#form label.state select,
+#form label.state {
+	float: left;
+	width: 140px;
+	}
+	
+#form label.city input,
+#form label.city {
+	width: 155px;
+	}
+
+#form label.areasqft,
+#form label.persqft,
+#form label.avgvolume,
+#form label.areasqft input,
+#form label.persqft input,
+#form label.avgvolume input {
+	float: left;
+	width: 130px;
+	}
+	
+#form label.companyslogan,
+#form label.companyslogan input,
+#form label.address,
+#form label.address input,
+#form label.address2,
+#form label.address2 input {
+	width: 410px;
+	}
+	
+#form .note {
+	font-size: 11px;
+	font-weight: normal;
+	font-style: italic;
+	}
+	
+#form fieldset.location,
+#form fieldset.ccaccepted {
+	clear: left;
+	float: left;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	}
+
+#form fieldset.location legend,
+#form fieldset.ccaccepted legend {
+	font-weight: normal;
+	color: #000;
+	background: transparent;
+	margin: 0px 0px 3px 0px;
+	padding: 0px;
+	font-size: 14px;
+	border: 0px;
+	}
+	
+	
+#form label.radio,
+#form label.checkBox {
+	float: left;
+	width: auto;
+	margin-right: 10px;
+	}
+	
+#form label.newsletter {
+	float: left;
+	color: #000;
+	width: 100%;
+	font-size: 11px;
+	}
+	
+#form label.newsletter input {
+	float: left;
+	}
+	
+#form input.radioBtn,
+#form input.checkBoxBtn {
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding: 5px 0px 10px 0px;
+	}
+	
+/* Handle Each Day Form Field */
+#form label.day {
+	clear: left;
+	float: left;
+	width: 50px;
+	margin: 4px 0px 0px 0px;
+	padding: 2px 0px;
+	display: block;
+	}
+	
+#form .openclosed {
+	width: 80px;
+	float: left;
+	}
+	
+#form .fields {
+	clear: left;
+	margin: 5px;
+	padding: 5px;
+	float: left;
+	}
+	
+#form .fields {
+	margin: 0px 3px;
+	}
+	
+.form em {
+	color: #aa0000;
+	}
+	
+.form fieldset {
+	padding: 5px 10px;
+	margin: 0px;
+	border: 0px;
+	}
+	
+.form fieldset.submitbutton {
+	margin: 10px 0px;
+	}
+	
+.form legend {
+	margin: 10px 0px 0px 0px;
+	padding: 5px 10px;
+	color: #f4116b;
+	font-size: 16px;
+	font-weight: bold;
+	background: #b7e25f;
+	}
+	
+.form label {
+	display: block;
+	width: 310px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 14px;
+	padding: 0px 0px 12px 0px;
+	text-align: left;
+}
+
+.form input,
+.form select,
+.form textarea {
+	border: 1px solid #666;
+	padding: 2px;
+	font-weight: normal;
+	margin-top: 3px;
+	font-family: Arial;
+	font-size: 12px;
+	}
+	
+.form select {
+	padding: 1px;
+	}
+
+.form label.name,
+.form label.description {
+	clear: left;
+	}
+	
+	
+.form label.description,
+.form label.name {
+	float: left;
+	text-align: left;
+	width: 450px;
+	margin: 0px 10px 0px 0px;
+}
+	
+.form label.description textarea,
+.form label.name input,
+.form label.name select {
+	float: left;
+	width: 450px;
+	display: block;
+	margin-top: 3px;
+	}
+	
+.form label.name select {
+	padding: 2px;
+	width: 455px;
+	}
+	
+	
+.form label.gender select,
+.form label.gender {
+	width: 80px;
+	}
+	
+.form label.birthday,
+.form label.birthday input {
+	width: 110px;
+	}
+	
+.form label.description textarea {
+	float: left;
+	height: 150px;
+	}
+	
+.form label.estmonth select,
+.form label.estmonth, 
+.form label.estyear,
+.form label.estyear input,
+.form label.yearsinbusiness,
+.form label.yearsinbusiness input,
+.form label.zip,
+.form label.zip input {
+	float: left;
+	width: 95px;
+	}
+	
+.form label.state select,
+.form label.state {
+	float: left;
+	width: 140px;
+	}
+	
+.form label.city input,
+.form label.city {
+	width: 155px;
+	}
+
+.form label.areasqft,
+.form label.persqft,
+.form label.avgvolume,
+.form label.areasqft input,
+.form label.persqft input,
+.form label.avgvolume input {
+	float: left;
+	width: 130px;
+	}
+	
+.form label.companyslogan,
+.form label.companyslogan input,
+.form label.address,
+.form label.address input,
+.form label.address2,
+.form label.address2 input {
+	width: 410px;
+	}
+	
+.form .note {
+	float: left;
+	font-size: 11px;
+	}
+	
+.form fieldset.location,
+.form fieldset.ccaccepted {
+	clear: left;
+	float: left;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	}
+
+.form fieldset.location legend,
+.form fieldset.ccaccepted legend {
+	font-weight: normal;
+	color: #000;
+	background: transparent;
+	margin: 0px 0px 3px 0px;
+	padding: 0px;
+	font-size: 12px;
+	border: 0px;
+	}
+	
+	
+.form label.radio,
+.form label.checkBox {
+	float: left;
+	width: auto;
+	margin-right: 10px;
+	}
+	
+.form label.newsletter {
+	float: left;
+	color: #000;
+	width: 100%;
+	font-size: 11px;
+	}
+	
+.form label.newsletter input {
+	float: left;
+	}
+	
+.form input.radioBtn,
+.form input.checkBoxBtn {
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding: 5px 0px 10px 0px;
+	}
+	
+/* Handle Each Day Form Field */
+.form label.day {
+	clear: left;
+	float: left;
+	width: 50px;
+	margin: 4px 0px 0px 0px;
+	padding: 2px 0px;
+	display: block;
+	}
+	
+.form .openclosed {
+	width: 80px;
+	float: lef.;
+	}
+	
+.form .fields {
+	clear: left;
+	margin: 5px;
+	padding: 5px;
+	float: left;
+	}
+	
+.form .fields {
+	margin: 0px 3px;}
+	
+#form .mainWebPageInfo label.name,
+#form .mainWebPageInfo label.name select,
+#form .mainWebPageInfo label.name textarea {
+	width: 565px;
+	}
+	
+#form .mainWebPageInfo label.name input {
+	width: 558px;
+}
+	
+#form .mainWebPageInfo .slider label.name,
+#form .mainWebPageInfo .slider label.name input,
+#form .mainWebPageInfo .slider label.name textarea {
+	width: 545px;
+	}
+	
+#form .quickWebPageInfo label.name,
+#form .quickWebPageInfo label.name input,
+#form .quickWebPageInfo label.name select {
+	width: 280px;
+	}
+
+#form .single-line{
+	display:block;
+	padding-bottom:12px;
+	}
+
+.justLabel {
+	font-size:15px;
+	}
+
+.column {
+	float:left;
+	width:200px;
+	}
+
+.multi-column0 {
+	float:left;
+	width:70px;
+	padding-bottom:12px;
+	}
+
+.multi-column1 {
+	float:left;
+	width:189px;
+	padding-bottom:12px;
+	}
+
+.multi-column2 {
+	float:left;
+	width:150px;
+	}
+
+.multi-column3 {
+	float:left;
+	padding:10px 40px 0 0;
+	font-size:20px;
+	}
+.multi-column4 {
+	float:left;
+	width:150px;
+	}
+	
+.multi-column5 {
+	float:left;
+	width:500px;
+	}
+	
+.multi-column6 {
+	float:left;
+	padding-right:10px;
+	}
+	
+.multi-column7 {
+	float:right;
+	padding-right:10px;
+	}
+
+.multi-column1 select {
+	width:178px;
+	}
+	
+.multi-column1 input {
+	width:178px;
+}
+
+.multi-column4 input {
+	width:100px;
+}

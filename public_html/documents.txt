@@ -1,0 +1,88 @@
+QDCMS
+- Quantum Delta Content Management System
+- Also a tool to run business
+- An interface to report problems with sites hosted by Quantum Delta
+- A secure system with access control for each user
+- Access control limited to modules
+- Logs changes made by each user in the system
+- Driven by database
+
+
+4. Sections and Modules
+
+	1. Content
+		- Forum: completed
+		- Blog: completed
+		- Survey: completed
+		- Contest: completed
+		- Web Pages: completed
+		- Navigation: completed
+		- Links: completed
+	
+	2. CRM
+		- Address Book: completed
+		- Events: completed
+	
+	3. Media
+		- Videos: not started
+		- Images: Binod is working on it
+		- Audio: not started
+		- Files: completed
+	
+	4. Marketing
+		- Ad Management: completed
+		- Newsletter: completed
+		- Heard About Us: completed
+	
+	5. Task Management
+		- Project: not started, not sure if we should keep this
+		- Task: not started, not sure if we should keep this
+		- Trouble Ticket: completed
+		- Error Handling: not started, not sure if we should keep this.
+	
+	6. Commerce
+		- Product: completed
+		- Subscription: completed
+	
+	7. Administration
+		- Site: some work left.
+		- Users: completed
+		- Sections: completed
+		- Modules: completed
+		- Roles: completed
+		- Patches: completed
+		- Email Server: completed
+
+5. Dashboard: not started, we need to re-engineer dashboard and the way actions performed are recorded in database
+
+6. Coding Practices
+	Sections
+	- Each section has index.cfm, layout folder which contains default.cfm, folders for modules.
+	- index.cfm is used to switch between modules.
+	- default.cfm contains welcome message.
+	Modules
+	- Each module contains index.cfm and four folders: layout, display, includes and actions
+	- Layout folder contains default.cfm and other layout folders.
+	- default.cfm contains common display items and switch statement.
+	- for each switch statement a file in layout folder is includes.
+	- Each layout file may include display or include files.
+	- Display files displays something on the screen. They are included in layout files. They are rarely used independently.
+	- Include files gets information from the database which can be used by layout and display files.
+	- Action files do not display any information on the screen. After the action is performed, control is returned (to layout).
+	CSS and JavaScript
+	- All javascript files and code should be included in pages via /includes/selectivejs.cfm
+	- All css files should be included in pages via /includes/selectivecss.cfm
+	File Access Method
+	- All coldfusion files with few exceptions are accessed through index.cfm. 
+	- If a particular file has to be accessed directly, it should be added to Application.fileaccesslist.
+	- Direct access to cfm files has to be minimized as much as possible for security reasons.
+	Using cftransaction
+	- Never use cftransaction in a function.
+	- Always use cftransaction (if possible) while calling a function which executes database query.
+	Comments
+	- Always write comments at the top of the file
+	- On comments section at the top, describe the flow of the program
+	
+7. Security
+	- There is two layers of security controlled by two files: /includes/securitylayer.cfm and /content/blog/includes/blogsecuritylayer.cfm
+	- all security variables are set in file /actions/aclaction.cfm

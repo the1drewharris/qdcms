@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<cfoutput>
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<cfinclude template="/includes/titleAndMeta.cfm">
+			<cfinclude template="/includes/selectivecss.cfm">
+		</head>
+		<body>
+			<cfinclude template="/display/header.cfm">
+			<div class="clear"></div>
+			<div id="content-bg">
+				<div id="content">
+					<cfinclude template="../display/submenuNavigation.cfm">
+					<cfinclude template="/display/errors.cfm">
+					<cfswitch expression="#url.action#">
+						<cfcase value="showalbums">
+							<cfinclude template="showvideoalbums.cfm">
+						</cfcase>
+						<cfcase value="viewalbum">
+							<cfinclude template="showvideoalbum.cfm">
+						</cfcase>
+						<cfcase value="addalbum">
+							<cfset title="Add Album">
+							<cfset formaction="actionaddvideoalbum">
+							<cfinclude template="addeditvideoalbum.cfm">
+						</cfcase>
+						<cfcase value="editalbum">
+							<cfset title="Edit Album">
+							<cfset formaction="actioneditvideoalbum">
+							<cfinclude template="../includes/videoalbuminfo.cfm">
+							<cfinclude template="addeditvideoalbum.cfm">
+						</cfcase>
+						<cfcase value="addvideo">
+							<cfset title="Add Video">
+							<cfset formaction="actionaddvideo">
+							<cfinclude template="addeditvideo.cfm">
+						</cfcase>
+						<cfcase value="editvideo">
+							<cfset title="Edit Video">
+							<cfset formaction="actioneditvideo">
+							<cfinclude template="../includes/videoinfo.cfm">
+							<cfinclude template="addeditvideo.cfm">
+						</cfcase>
+						<cfcase value="addfile">
+							<cfset title="Add File">
+							<cfset formaction="actionaddfile">
+							<cfinclude template="addfiles.cfm">
+						</cfcase>
+						<cfcase value="viewreport">
+							<cfinclude template="viewreport.cfm">
+						</cfcase>
+						<cfcase value="watchvideo">
+							<cfinclude template="watchvideo.cfm">
+						</cfcase>
+						<cfcase value="inactivevideos">
+							<cfinclude template="inactivevideos.cfm">
+						</cfcase>
+						<cfdefaultcase>
+							<cflocation url="/cms/#url.section#/#url.module#/showalbums" addtoken="false">
+						</cfdefaultcase>
+					</cfswitch>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<cfinclude template="/display/footer.cfm">
+			<cfinclude template="/includes/selectivejs.cfm">
+		</body>
+	</html>
+</cfoutput>
